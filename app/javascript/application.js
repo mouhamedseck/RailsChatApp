@@ -3,5 +3,11 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 // Loads all Semantic javascripts 
+//= require rails-ujs
 //= require semantic-ui
 //= require jquery
+//= require turbolinks
+
+$(document).on('turbolinks:load', function() {
+    $('.ui.dropdown').dropdown();
+})
